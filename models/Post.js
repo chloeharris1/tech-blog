@@ -15,12 +15,9 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_text: {
+        content: {
             type: DataTypes.TEXT,
             allowNull: false,
-            validate: {
-                // post must be at least one character long
-                len: [1]
             }
         },
         user_id: {

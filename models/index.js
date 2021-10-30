@@ -4,7 +4,7 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('Comment'); 
 
-// Then create associations between the models
+// Create associations between the models
 
 // User-Post 
 User.hasMany(Post, {
