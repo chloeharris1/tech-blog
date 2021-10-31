@@ -2,16 +2,16 @@ const { User } = require('../models');
 
 const userdata = [
   {
-    username: 'specsnstats',
+    username: 'goldengod98',
   },
   {
-    username: 'jmarq019',
+    username: 'zingingcutie23',
   },
   {
-    username: 'chloeharris1',
+    username: 'ricketycricket',
   },
 ];
 
-const seedPost = () => Post.bulkCreate(postdata);
+const seedUser = () => User.bulkCreate(userdata);
 
-module.exports = seedPost;
+module.exports = seedUser;

@@ -1,8 +1,7 @@
 // Gather all models and export them for use
-
 const User = require('./User'); 
 const Post = require('./Post');
-const Comment = require('Comment'); 
+const Comment = require('./Comment'); 
 
 // Create associations between the models
 
