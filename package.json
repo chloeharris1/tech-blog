@@ -24,10 +24,12 @@
   "homepage": "https://github.com/chloeharris1/tech-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
     "dot": "^1.1.3",
     "dotenv": "^10.0.0",
     "env": "0.0.2",
     "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.2",
