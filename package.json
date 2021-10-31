@@ -2,13 +2,15 @@
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "- [Description](#description)\r - [Installation](#installation)\r - [Usage](#usage)\r - [Screenshots](#screenshots)\r - [Link](#link)\r - [Questions](#questions)",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "14.18.0"
+  },
   "scripts": {
     "seed": "node seeds/index.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon server.js"
-
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "dotenv": "^10.0.0",
     "env": "0.0.2",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.2",
     "nodemon": "^2.0.14",
