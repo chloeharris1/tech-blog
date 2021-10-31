@@ -1,5 +1,3 @@
-//  Server for Tech Blog 
-
 // Dependencies 
 const express = require('express');
 const session = require('express-session');
@@ -18,17 +16,18 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-const sess = {
-  secret: process.env.SECRET,
-  cookie: {},
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
-};
-
-app.use(session(sess));
+  cookie: { 
+      maxAge: 1000 * 60 * 60 * 2
+   },
+   store: new SequelizeStore({
+      db:sequelize
+   })
+}))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

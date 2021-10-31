@@ -1,4 +1,4 @@
-// Gather all models and export them for use
+// Export all models for use
 const User = require('./User'); 
 const Post = require('./Post');
 const Comment = require('./Comment'); 

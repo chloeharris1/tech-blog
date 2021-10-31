@@ -1,6 +1,7 @@
-const router = require('express').Router();
-// Import models
-const { User} = require('../../models');
+const express = require('express');
+const router = express.Router();
+const {User, Post, Comment} = require('../../models');
+const bcrypt = require("bcrypt");
 
 // Creating new user and saving session
 router.post('/', async (req, res) => {
