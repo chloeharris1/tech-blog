@@ -16,8 +16,48 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 This app follows the MVC paradigm architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
+## Installation
+To use this application, clone the repository to your local machine:
+```
+git clone git@github.com:chloeharris1/tech-blog.git
+```
 
+After cloning, you will need to create a .env file including the variables below in order for the application to run.
+``` 
+DB_USER='root'
+DB_PW='mySql password'
+DB_NAME='techblog_db'
+```
+Next, install the dependencies with command:
+```
+npm init 
+```
+```
+npm install mysql2
+```
+```
+npm install sequelize
+```
+```
+npm install dotenv
+```
 
+## Usage
+When you want to run the application, type the below into your terminal command line:
+```
+mysql -u root -p
+(Enter password) 
+exit
+```
+```
+source db/schema.sql
+```
+```
+npm run seed
+```
+```
+npm start
+```
 
 ## Questions
 
