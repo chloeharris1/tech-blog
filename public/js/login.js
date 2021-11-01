@@ -1,26 +1,22 @@
-async function loginFormHandler(event) {
-    event.preventDefault();
-  
-    const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-  
-    if (username && password) {
-      const response = await fetch('/api/users/login', {
-        method: 'post',
-        body: JSON.stringify({
-          username,
-          password
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert(response.statusText);
-      }
-    }
-  }
-  
+const loginForm = document.querySelector("#login-form");
 
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+loginForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const userObj={
+        username:document.querySelector("#username-login").value,
+        password:document.querySelector("#password-login").value,
+    }
+    fetch("/api/users/login",{
+        method:"POST",
+        body:JSON.stringify(userObj),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    }).then(res=>{
+        if(res.ok){
+           location.href = "/profile"
+        } else {
+            alert("Error")
+        }
+    }) 
+})
